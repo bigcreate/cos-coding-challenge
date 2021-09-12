@@ -1,0 +1,13 @@
+<form [formGroup]="loginForm" class="login-form" noValidate>
+  <div class="user-id" [class.invalid]="userIdControl.touched && userIdControl.invalid">
+    <label for="user-id" class="label">User ID:</label>
+    <input id="user-id" class="field" type="email" [formControl]="userIdControl">
+  </div>
+  <div class="password" [class.invalid]="passwordControl.touched && passwordControl.invalid">
+    <label for="password" class="label">Password:</label>
+    <input id="password" class="field" type="password" [formControl]="passwordControl">
+  </div>
+  <div class="login-btn">
+    <button (click)="clickOnLogin()">Login</button>
+  </div>
+</form>
