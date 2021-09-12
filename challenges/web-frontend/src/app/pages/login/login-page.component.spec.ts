@@ -23,4 +23,7 @@ describe('LoginPageComponent', () => {
 
   it('should show a error message if a user log in as a seller', () => {
   });
+
+  it('should show a error message if  a user try to login with incorrect data', () => {
+  });
 });

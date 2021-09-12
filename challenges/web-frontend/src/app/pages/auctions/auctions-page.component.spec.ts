@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AuctionsPageComponent } from './auctions-page.component';
 
 describe('AuctionsPageComponent', () => {
