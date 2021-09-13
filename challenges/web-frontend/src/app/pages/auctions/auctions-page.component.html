@@ -1,1 +1,4 @@
-<p>auctions works!</p>
+<header class="header">
+  <button (click)="logout()">Logout</button>
+</header>
+<cos-auctions-list class="list" [auctions]="auctions$ | async"></cos-auctions-list>

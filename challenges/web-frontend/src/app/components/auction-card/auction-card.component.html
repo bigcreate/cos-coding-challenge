@@ -1,0 +1,15 @@
+<ng-container *ngIf="auction">
+  <div class="auction-block">
+    <span class="remaining-time">{{auction.remainingTimeInSeconds | remainingTime | async}}</span>
+    <span class="current-bid">{{auction.currentHighestBidValue | currency}}</span>
+  </div>
+  <div class="image-block"><img class="image" src="{{auction.associatedVehicle.vehicleImages[0].url}}" alt="cover"/></div>
+  <h3 class="title">{{auction.label}}</h3>
+  <div class="info-block">
+    <div class="info"><span class="label">Erstzulassung:</span><span class="value">{{auction.associatedVehicle.ez}}</span></div>
+    <div class="info"><span class="label">Mileage:</span><span class="value">{{auction.associatedVehicle.mileageInKm | number:'1.0-0'}}km</span></div>
+    <div class="info"><span class="label">Fuel Type:</span><span class="value">{{auction.associatedVehicle.fuelType | fuelType}}</span></div>
+    <div class="info"><span class="label">Transmission:</span><span class="value">{{auction.associatedVehicle.transmission | transmission}}</span></div>
+  </div>
+  <div *ngIf="auction.amIHighestBidder" class="winner"><span>You are winning!</span></div>
+</ng-container>

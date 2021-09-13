@@ -23,7 +23,4 @@ describe('AuctionsPageComponent', () => {
 
   it('should request a list of auctions every 20 seconds', () => {
   });
-
-  it('should show warning message if a request is failed', () => {
-  });
 });
